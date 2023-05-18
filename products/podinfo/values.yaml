@@ -1,0 +1,9 @@
+backend:
+    cacheAddr: tcp://redis:6379
+    replicas: "2"
+cache:
+    replicas: "1"
+frontend:
+    color: red
+    message: Hello, world!
+    replicas: "1"
