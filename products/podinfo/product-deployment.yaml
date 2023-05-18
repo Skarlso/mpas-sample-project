@@ -1,0 +1,81 @@
+apiVersion: mpas.ocm.software/v1alpha1
+kind: ProductDeployment
+metadata:
+  creationTimestamp: null
+  name: podinfo
+  namespace: mpas-system
+spec:
+  component:
+    name: mpas.ocm.software/podinfo
+    registry:
+      url: ghcr.io/skarlso/mpas
+    version: 1.0.1
+  pipelines:
+  - configuration:
+      rules:
+        name: config
+        referencePath:
+        - name: backend
+        version: 1.0.0
+    localization:
+      name: config
+      referencePath:
+      - name: backend
+      version: 1.0.0
+    name: backend
+    resource:
+      name: manifests
+      referencePath:
+      - name: backend
+      version: 1.0.0
+    targetRole:
+      selector:
+        matchLabels:
+          target.mpas.ocm.software/ingress-enabled: "true"
+      type: kubernetes
+  - configuration:
+      rules:
+        name: config
+        referencePath:
+        - name: frontend
+        version: 1.0.0
+    localization:
+      name: config
+      referencePath:
+      - name: frontend
+      version: 1.0.0
+    name: frontend
+    resource:
+      name: manifests
+      referencePath:
+      - name: frontend
+      version: 1.0.0
+    targetRole:
+      selector:
+        matchLabels:
+          target.mpas.ocm.software/ingress-enabled: "true"
+      type: kubernetes
+  - configuration:
+      rules:
+        name: config
+        referencePath:
+        - name: redis
+        version: 1.0.0
+    localization:
+      name: config
+      referencePath:
+      - name: redis
+      version: 1.0.0
+    name: cache
+    resource:
+      name: manifests
+      referencePath:
+      - name: redis
+      version: 1.0.0
+    targetRole:
+      selector:
+        matchLabels:
+          target.mpas.ocm.software/ingress-enabled: "true"
+      type: kubernetes
+  serviceAccountName: mpas-admin
+status: {}
