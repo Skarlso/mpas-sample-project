@@ -1,6 +1,6 @@
 backend:
     cacheAddr: tcp://redis:6379
-    replicas: "2"
+    replicas: "5"
 cache:
     replicas: "1"
 frontend:
