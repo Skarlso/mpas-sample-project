@@ -1,6 +1,3 @@
-backend:
-    cacheAddr: tcp://redis:6379
-    replicas: 2
 cache:
     replicas: 1
 frontend:
