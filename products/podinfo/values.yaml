@@ -1,5 +1,6 @@
 cache:
     replicas: 1
+    newThing: new
 frontend:
     color: red
     message: Hello, world!
