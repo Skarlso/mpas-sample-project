@@ -4,6 +4,6 @@ backend:
 cache:
     replicas: 1
 frontend:
-    color: "red"
+    color: "green"
     message: Hello, world!
     replicas: 1
