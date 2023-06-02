@@ -1,5 +1,5 @@
 cache:
-    replicas: 1
+    replicas: 2
 frontend:
     color: red
     message: Hello, world!
