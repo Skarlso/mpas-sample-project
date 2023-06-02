@@ -1,4 +1,3 @@
-
 # Configuration instructions for backend
 
 ## Configuration Instructions
