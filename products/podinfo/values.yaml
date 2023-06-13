@@ -1,6 +1,6 @@
 backend:
     cacheAddr: tcp://redis:6379
-    replicas: 2 #+mpas-ignore
+    replicas: 1 #+mpas-ignore
 cache:
     replicas: 1
 frontend:
