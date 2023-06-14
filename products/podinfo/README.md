@@ -26,8 +26,6 @@ The following parameters are available for configuration:
 | message | string | Hello, world! | The message to display |
 | replicas | integer | 1 | The number of replicas for the application |
 
-NEW INFO
-
 # Configuration instructions for cache
 
 ## Configuration Instructions
