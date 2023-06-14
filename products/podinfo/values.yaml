@@ -1,9 +1,0 @@
-backend:
-  cacheAddr: tcp://redis:6379
-  replicas: 2.0
-cache:
-  replicas: 1.0
-frontend:
-  color: red
-  message: Hello, world!
-  replicas: 1 #+mpas-ignore
