@@ -6,4 +6,4 @@ cache:
 frontend:
     color: red
     message: Hello, world!
-    replicas: 3
+    replicas: 1 #+mpas-ignore
